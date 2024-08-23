@@ -1,0 +1,14 @@
+(defsrc
+  caps
+  rmet
+)
+
+(defalias
+  srh (macro A-spc)
+  trm (macro M-t)
+)
+
+(deflayermap (base-layer)
+  caps @srh
+  rmet @trm
+)
