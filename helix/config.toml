@@ -1,0 +1,60 @@
+theme = "molokai"
+
+[editor]
+bufferline = "always"
+auto-format = true
+mouse = true
+# true-color = true
+cursorline = true
+completion-timeout = 5
+preview-completion-insert = false
+completion-trigger-len = 1
+color-modes = true
+popup-border = "all"
+indent-heuristic = "hybrid"
+end-of-line-diagnostics = "error"
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-progress-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-s = ":w!"
+C-w = ":buffer-close"
+C-v = [":clipboard-paste-before"]
+
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+normal = "block"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+reder = true
+character = "┊"
+skip-leverl = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+max-diagnostics = 5
+
+[editor.statusline]
+left = ["mode", "spinner", "file-base-name"]
+center = ["selections", "spacer", "file-name"]
+right = ["version-control", "diagnostics", "position", "file-encoding", "file-line-ending"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
