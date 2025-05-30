@@ -132,6 +132,10 @@ alias power-c-="powerprofilesctl configure-action amdgpu_panel_power --disable"
 alias power-g+="powerprofilesctl configure-action amdgpu_dpm --enable"
 alias power-g-="powerprofilesctl configure-action amdgpu_dpm --disable"
 
+# Fan control
+alias fanctr="sudo ectool --interface=lpc fanduty"
+alias fanctr-a="sudo ectool --interface=lpc autofanctrl"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
