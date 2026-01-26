@@ -7,7 +7,7 @@ mods = "Super|Shift"
 live_config_reload = true
 
 [font]
-normal = {family = "JetBrains Mono Nerd Font", style = "Regular"} 
+normal = {family = "CaskaydiaMono Nerd Font", style = "Regular"} 
 
 [colors.bright]
 black = "#42505D"
@@ -43,6 +43,8 @@ save_to_clipboard = false
 [window]
 dynamic_title = true
 title = "Terminal - Alacritty"
+opacity = 0.65
+blur = true
 
 [window.class]
 general = "Alacritty"

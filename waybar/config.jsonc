@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "spacing": 0,
-    "height": 47,
+    "height": 20,
     "modules-left": [
         "cpu",
         "memory",
@@ -20,14 +20,6 @@
         "bluetooth",
         "battery"
     ],
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "on-click-right": "fullscreen",
-        "icon-theme": "WhiteSur",
-        "icon-size": 35,
-        "tooltip-format": "{title}"
-    },
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
@@ -43,7 +35,6 @@
             "8": "8",
             "9": "9",
             "10": "10",
-            "active": "󱓻",
             "urgent": "󱓻"
         },
         "persistent_workspaces": {
@@ -68,7 +59,7 @@
         "tooltip-format-ethernet": "{ifname} 🖧 ",
         "on-click": "alacritty & nmtui"
     },
-        "backlight": {
+    "backlight": {
     		"device": "acpi_video1",
     		"format": " {}%",
         "interval":1,
@@ -144,28 +135,25 @@
       "tooltip": false
     },
     "pulseaudio": {
-        "format": "{icon}{volume}% {format_source}",
-        "nospacing": 1,
-        //"tooltip-format": "Volume : {volume}%",
-        "format-muted": "󰝟 {volume}% {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " Muted",
-        "format-icons": {
-            "default": ["󰖀 ","󰕾 ","  "]
-        },
-        "on-click": "pavucontrol",
-        "scroll-step": 0
-    },
+        "tooltip": false,
+    		"scroll-step": 5,
+    		"format": "{icon} {volume}%",
+    		"format-muted": "{icon} {volume}%",
+        "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    		"format-icons": {
+    			"default": ["", "", ""]
+    		},
+    		"on-click": "pavucontrol"
+  	},
     "bluetooth": {
         "format-on": "󰂯",
         "format-off": "BT-off",
         "format-disabled": "󰂲",
         "format-connected-battery": "{device_battery_percentage}% 󰂯",
-        "format-alt": "{device_alias} 󰂯",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-        "on-click-right": "blueman-manager",
+        "on-click": "blueman-manager",
     }
 }

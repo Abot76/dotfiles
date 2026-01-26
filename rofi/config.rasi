@@ -9,7 +9,7 @@ configuration {
  	color-window: "#1c2023, #919ba0, #1c2023";
 }
 
-@theme "/usr/share/rofi/themes/Monokai.rasi"
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
 
 element {
     padding: 5px;
@@ -20,3 +20,5 @@ element {
 element-icon {
     size: 25px;
 }
+
+@theme "/home/bozic/.config/rofi/DarkRed.rasi"

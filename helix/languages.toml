@@ -1,0 +1,38 @@
+[[language]]
+name = "cpp"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["clang"]
+
+
+[language-server.clang]
+command = "clang"
+
+[[language]]
+name = "c"
+language-servers = ["clang"]
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+language-servers = [
+  { name = "pylsp", except-features = ["format"] },
+  "ruff"
+]
+auto-format = true
+
+[language.formatter]
+command = "ruff"
+args = ["format", "-"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.pylsp.config.pylsp.plugins]
+pylsp_mypy.enabled = true
+pylsp_mypy.live_mode = true
+rope_autoimport.enabled = true
+flake8.enabled = false
+pycodestyle.enabled = false
+pyflakes.enabled = false

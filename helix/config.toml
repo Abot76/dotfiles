@@ -40,6 +40,7 @@ normal = "block"
 [editor.file-picker]
 hidden = false
 
+
 [editor.indent-guides]
 reder = true
 character = "┊"
