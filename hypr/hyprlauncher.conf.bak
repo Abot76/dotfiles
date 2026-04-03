@@ -1,0 +1,3 @@
+finders {
+    math_prefix = ">"
+}
